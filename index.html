@@ -50,6 +50,16 @@
     </style>
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159951151-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-159951151-1');
+    </script>
 </head>
 
 <body>
@@ -217,9 +227,25 @@
     </div><!-- /.container -->
 
     <!-- FOOTER -->
-    <footer class="container">
-      <p class="float-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2019-2020 Bubble & Squeak Kids Kitchen. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img src="img/favicon-32x32.png"></img>
+          <small class="d-block mb-3 text-muted">&copy; 2019-2020 Bubble & Squeak Kids Kitchen. &middot; </small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Email</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="mailto:ruth@bubbleandsqueakkids.com?subject=Enquiry">ruth@bubbleandsqueakkids.com</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Phone</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">00000000000</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </main>
 
