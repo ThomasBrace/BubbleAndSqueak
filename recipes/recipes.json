@@ -1,0 +1,29 @@
+var recipes = {
+  "recipe": [
+    {
+      "name": "Easy Cheesy Scones",
+      "description": "Delecious party snack",
+      "tags": ["Snack","Savory"]
+    },
+    {
+      "name": "Stuffed Peppers",
+      "description": "Quick and easy tasty meal",
+      "tags": ["Meal","Savory"]
+    },
+    {
+      "name": "Exotic Fruit Smoothies",
+      "description": "A healthy drink",
+      "tags": ["Drink","Fruty"]
+    },
+    {
+      "name": "Pastry Pinwheels",
+      "description": "Perfect Party Snack",
+      "tags": ["Drink","Fruty"]
+    },
+    {
+      "name": "Fork Biscuits",
+      "description": "Cheeky Snack",
+      "tags": ["Snack","Savory"]
+    }
+  ]
+}
