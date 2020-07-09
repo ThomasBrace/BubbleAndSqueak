@@ -72,6 +72,12 @@ body {
   }
 }
 
+.btn-outline-secondary:hover {
+    color: #6c757d !important;
+    background-color: #fff !important;
+    border-color: #6c757d;
+    box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
