@@ -104,9 +104,14 @@
       <hr class="featurette-divider">
       <hr class="featurette-divider">
       <h2 class="featurette-heading">Recipes</h2>
-      <hr class="featurette-divider">
 
       <div class="featurette row text-center text-lg-left">
+
+        <div class="filters row ml-3">
+        </div>
+
+        <hr class="featurette-divider">
+
         <div class="recipes card-columns">
 
         </div>
@@ -170,34 +175,115 @@
     }
 
     $( document ).ready(function() {
+      buildTags();
       buildList();
 
     });
 
+    function buildTags(){
+      var filters = [];
+      var tags = [];
+      var tagsHtml = "";
+      for (i = 0; i < recipes.recipe.length; i++) {
+        if (recipes.recipe[i].active) {
+          tags = tags.concat(recipes.recipe[i].tags);
+          tags = removeDuplicates(tags);
+        }
+      }
+      for (i = 0; i < tags.length; i++) {
+        tagsHtml += "<div class='btn-group-toggle mr-2 mt-2 mb-2' data-toggle='buttons'>";
+        tagsHtml += "<label class='btn btn-outline-secondary btn-sm'>";
+        tagsHtml += "<input class='filterButton' data-value=" + tags[i] + " type='checkbox'> #" + tags[i];
+        tagsHtml += "</label>";
+        tagsHtml += "</div>";
+      }
+      $(".filters").append(tagsHtml);
+
+      // bind click event
+      $(".filterButton").click(function() {
+        var attrName = $(this).attr("data-value");
+        var selected = $(this).parent().hasClass("active")
+        if(!selected) {
+          filters.push(attrName)
+        } else {
+          filters.remove(attrName)
+        }
+  console.log(filters);
+        buildList(filters)
+      });
+    }
+
+    function cardHTMl(i){
+      var html = "";
+      html += "<div class='card text-center'>";
+      html +=    "<a target='_blank' href='recipes/pdf/" + recipes.recipe[i].name + ".pdf'>"
+      html +=      "<img class='card-img-top' src='recipes/thumb/" + recipes.recipe[i].name + ".png' alt='" + recipes.recipe[i].name + "'>";
+      html +=    "</a>";
+      html +=    "<div class='card-body'>";
+      html +=      "<h5 class='card-title'>" + recipes.recipe[i].name + "</h5>";
+      html +=      "<p class='card-text'>" + recipes.recipe[i].description + "</p>";
+      if (recipes.recipe[i].tags.length > 0){
+        html += "<p class='card-text'>"
+        for (x = 0; x < recipes.recipe[i].tags.length; x++) {
+          html += "<small class='text-muted'>#" + recipes.recipe[i].tags[x] + " </small>"
+        }
+        html += "</p>"
+      }
+      html +=      "</div>";
+      html += "</div>";
+      return html;
+    }
+
     function buildList(filter){
       var recipesHtml = ""
+      $(".recipes").html("");
       // loop through recipes
       for (i = 0; i < recipes.recipe.length; i++) {
-        recipesHtml += "<div class='card text-center'>";
-        recipesHtml +=    "<a target='_blank' href='recipes/pdf/" + recipes.recipe[i].name + ".pdf'>"
-        recipesHtml +=      "<img class='card-img-top' src='recipes/thumb/" + recipes.recipe[i].name + ".png' alt='" + recipes.recipe[i].name + "'>";
-        recipesHtml +=    "</a>";
-        recipesHtml +=    "<div class='card-body'>";
-        recipesHtml +=      "<h5 class='card-title'>" + recipes.recipe[i].name + "</h5>";
-        recipesHtml +=      "<p class='card-text'>" + recipes.recipe[i].description + "</p>";
-        if (recipes.recipe[i].tags.length > 0){
-          recipesHtml += "<p class='card-text'>"
-          for (x = 0; x < recipes.recipe[i].tags.length; x++) {
-            recipesHtml += "<small class='text-muted'>#" + recipes.recipe[i].tags[x] + " </small>"
+        if (recipes.recipe[i].active) {
+          if (filter) {
+            if (filter.length > 0) {
+              if (findOne(filter,recipes.recipe[i].tags)) {
+                recipesHtml += cardHTMl(i);
+              }
+            } else {
+              recipesHtml += cardHTMl(i);
+            }
+          } else {
+            recipesHtml += cardHTMl(i);
           }
-          recipesHtml += "</p>"
         }
-        recipesHtml +=      "</div>";
-        recipesHtml += "</div>";
       }
-
       $(".recipes").append(recipesHtml);
     }
+
+    // helper JS
+
+    function removeDuplicates(array) {
+      return array.filter((a, b) => array.indexOf(a) === b)
+    };
+
+    Array.prototype.remove = function() {
+        var what, a = arguments, L = a.length, ax;
+        while (L && this.length) {
+            what = a[--L];
+            while ((ax = this.indexOf(what)) !== -1) {
+                this.splice(ax, 1);
+            }
+        }
+        return this;
+    };
+
+    /**
+     * @description determine if an array contains one or more items from another array.
+     * @param {array} haystack the array to search.
+     * @param {array} arr the array providing items to check for in the haystack.
+     * @return {boolean} true|false if haystack contains at least one item from arr.
+     */
+    var findOne = function (haystack, arr) {
+        return arr.some(function (v) {
+            return haystack.indexOf(v) >= 0;
+        });
+    };
   </script>
 </body>
 <p class='card-text'><small class='text-muted'>Last updated 3 mins ago</small></p>

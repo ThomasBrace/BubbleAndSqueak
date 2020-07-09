@@ -1,29 +1,39 @@
 var recipes = {
   "recipe": [
     {
-      "name": "Easy Cheesy Scones",
-      "description": "Delecious party snack",
-      "tags": ["Snack","Savory"]
+      "name": "Fork Biscuits",
+      "description": "Cheeky Snack",
+      "tags": ["Snack","Savory"],
+      "active" : true
+    },{
+      "name": "Choc A Block Brownies",
+      "description": "Cheeky Snack",
+      "tags": ["Snack","Sweet","Chocolate"],
+      "active" : true
     },
     {
       "name": "Stuffed Peppers",
       "description": "Quick and easy tasty meal",
-      "tags": ["Meal","Savory"]
+      "tags": ["Meal","Savory"],
+      "active" : true
+    },
+    {
+      "name": "Easy Cheesy Scones",
+      "description": "Delicious party snack",
+      "tags": ["Snack","Savory"],
+      "active" : false
     },
     {
       "name": "Exotic Fruit Smoothies",
       "description": "A healthy drink",
-      "tags": ["Drink","Fruty"]
+      "tags": ["Drink","Fruty"],
+      "active" : false
     },
     {
       "name": "Pastry Pinwheels",
       "description": "Perfect Party Snack",
-      "tags": ["Drink","Fruty"]
-    },
-    {
-      "name": "Fork Biscuits",
-      "description": "Cheeky Snack",
-      "tags": ["Snack","Savory"]
+      "tags": ["Snack","Savory"],
+      "active" : false
     }
   ]
 }
