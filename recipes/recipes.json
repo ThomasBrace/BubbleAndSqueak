@@ -2,18 +2,18 @@ var recipes = {
   "recipe": [
     {
       "name": "Fork Biscuits",
-      "description": "Cheeky Snack",
+      "description": "Easy peasy to make!",
       "tags": ["Snack","Savory"],
       "active" : true
     },{
       "name": "Choc A Block Brownies",
-      "description": "Cheeky Snack",
+      "description": "Rich, soft and gooey",
       "tags": ["Snack","Sweet","Chocolate"],
       "active" : true
     },
     {
       "name": "Stuffed Peppers",
-      "description": "Quick and easy tasty meal",
+      "description": "Great for a light lunch",
       "tags": ["Meal","Savory"],
       "active" : true
     },
