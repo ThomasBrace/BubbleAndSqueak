@@ -3,7 +3,7 @@ var recipes = {
     {
       "name": "Fork Biscuits",
       "description": "Easy peasy to make!",
-      "tags": ["Snack","Savory"],
+      "tags": ["Snack","Sweet"],
       "active" : true
     },{
       "name": "Choc A Block Brownies",
