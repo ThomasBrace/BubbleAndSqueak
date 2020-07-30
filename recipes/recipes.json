@@ -7,33 +7,39 @@ var recipes = {
       "active" : true
     },{
       "name": "Choc A Block Brownies",
-      "description": "Rich, soft and gooey",
+      "description": "Rich, soft and gooey.",
       "tags": ["Snack","Sweet","Chocolate"],
       "active" : true
     },
     {
       "name": "Stuffed Peppers",
-      "description": "Great for a light lunch",
+      "description": "Great for a light lunch.",
       "tags": ["Meal","Savory"],
       "active" : true
     },
     {
       "name": "Easy Cheesy Scones",
-      "description": "Delicious party snack",
+      "description": "Delicious party snack.",
       "tags": ["Snack","Savory"],
       "active" : false
     },
     {
       "name": "Exotic Fruit Smoothies",
-      "description": "A healthy drink",
+      "description": "A healthy drink.",
       "tags": ["Drink","Fruty"],
       "active" : false
     },
     {
       "name": "Pastry Pinwheels",
-      "description": "Perfect Party Snack",
+      "description": "Perfect Party Snack.",
       "tags": ["Snack","Savory"],
       "active" : false
+    },
+    {
+      "name": "Five Ways With Omelettes",
+      "description": "A great source of protein and really quick and easy to make.",
+      "tags": ["Meal","Savory","Healthy"],
+      "active" : true
     }
   ]
 }
