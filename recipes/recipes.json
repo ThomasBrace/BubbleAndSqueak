@@ -40,6 +40,12 @@ var recipes = {
       "description": "A great source of protein and really quick and easy to make.",
       "tags": ["Meal","Savory","Healthy"],
       "active" : true
+    },
+    {
+      "name": "Easy Cheesy Pizza",
+      "description": "Easy to make, delicious to eat.",
+      "tags": ["Meal","Savory"],
+      "active" : true
     }
   ]
 }
