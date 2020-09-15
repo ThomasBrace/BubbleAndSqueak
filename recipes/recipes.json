@@ -46,6 +46,12 @@ var recipes = {
       "description": "Easy to make, delicious to eat.",
       "tags": ["Meal","Savory"],
       "active" : true
+    },
+    {
+      "name": "Kick-ass Quesadillas",
+      "description": "Cheesy Mexican goodness.",
+      "tags": ["Meal","Savory"],
+      "active" : true
     }
   ]
 }
