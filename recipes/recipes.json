@@ -48,7 +48,7 @@ var recipes = {
       "active" : true
     },
     {
-      "name": "Kickass Quesadillas",
+      "name": "Kick-ass Quesadillas",
       "description": "Cheesy Mexican goodness.",
       "tags": ["Meal","Savory"],
       "active" : true
