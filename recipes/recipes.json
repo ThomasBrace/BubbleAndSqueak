@@ -4,6 +4,7 @@ var recipes = {
       "name": "Apple Crumble Tumble",
       "description": "A tasty autumn treat",
       "tags": ["Snack","Sweet","Dessert","Fruty"],
+      "video": "AppleCrumbleTumble.html",
       "active" : true
     },{
       "name": "Fork Biscuits",
