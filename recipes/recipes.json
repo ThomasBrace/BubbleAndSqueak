@@ -3,7 +3,7 @@ var recipes = {
     {
       "name": "Apple Crumble Tumble",
       "description": "A tasty autumn treat",
-      "tags": ["Snack","Sweet","Dessert","Fruty"],
+      "tags": ["Snack","Sweet","Dessert","Fruity"],
       "video": "AppleCrumbleTumble.html",
       "active" : true
     },{
@@ -32,7 +32,7 @@ var recipes = {
     {
       "name": "Exotic Fruit Smoothies",
       "description": "A healthy drink.",
-      "tags": ["Drink","Fruty"],
+      "tags": ["Drink","Fruity"],
       "active" : false
     },
     {
