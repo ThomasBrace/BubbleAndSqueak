@@ -20,13 +20,13 @@ var recipes = {
     {
       "name": "Stuffed Peppers",
       "description": "Great for a light lunch.",
-      "tags": ["Meal","Savory"],
+      "tags": ["Meal","Savoury"],
       "active" : true
     },
     {
       "name": "Easy Cheesy Scones",
       "description": "Delicious party snack.",
-      "tags": ["Snack","Savory"],
+      "tags": ["Snack","Savoury"],
       "active" : false
     },
     {
@@ -38,25 +38,25 @@ var recipes = {
     {
       "name": "Pastry Pinwheels",
       "description": "Perfect Party Snack.",
-      "tags": ["Snack","Savory"],
+      "tags": ["Snack","Savoury"],
       "active" : false
     },
     {
       "name": "Five Ways With Omelettes",
       "description": "A great source of protein and really quick and easy to make.",
-      "tags": ["Meal","Savory","Healthy"],
+      "tags": ["Meal","Savoury","Healthy"],
       "active" : true
     },
     {
       "name": "Easy Cheesy Pizza",
       "description": "Easy to make, delicious to eat.",
-      "tags": ["Meal","Savory"],
+      "tags": ["Meal","Savoury"],
       "active" : true
     },
     {
       "name": "Kick-ass Quesadillas",
       "description": "Cheesy Mexican goodness.",
-      "tags": ["Meal","Savory"],
+      "tags": ["Meal","Savoury"],
       "active" : true
     }
   ]
