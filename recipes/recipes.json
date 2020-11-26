@@ -1,6 +1,12 @@
 var recipes = {
   "recipe": [
     {
+      "name": "Banana and Choc Chip Bars",
+      "description": "Oaty goodness in a bar",
+      "tags": ["Snack","Sweet","Chocolate"],
+      "video": "BananaAndChocChipBars.html",
+      "active" : true
+    },{
       "name": "Apple Crumble Tumble",
       "description": "A tasty autumn treat",
       "tags": ["Snack","Sweet","Dessert","Fruity"],
